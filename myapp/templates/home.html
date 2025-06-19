@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+  <div class="home-container">
+    <div class="welcome-text">
+      <h1>Welcome, {{ username }}!</h1>
+      <a href="{{ url_for('logout') }}">Logout</a>
+    </div>
+
+    <div class="day-picker-text">
+      <h2>Pick a day of the week</h2>
+    </div>
+
+    <form action="{{ url_for('select_number', button=button)}}" class="weekdays-container" method="POST">
+      <button type="submit" name="button" class="day-box" value="Monday" >Monday</button>
+      <button type="submit" name="button" class="day-box" value="Tuesday" >Tuesday</button>
+      <button type="submit" name="button" class="day-box" value="Wednesday" >Wednesday</button>
+      <button type="submit" name="button" class="day-box" value="Thursday" >Thursday</button>
+      <button type="submit" name="button" class="day-box" value="Friday" >Friday</button>
+    </form>
+  </div>
+ 
+{% endblock %}

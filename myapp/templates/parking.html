@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block title %}day{% endblock %}
+
+{% block content %}
+<div class="park-container">
+    <!-- Left Column: Number Selection -->
+    <div class="left">
+      <form method="POST" action="{{ url_for('select_number') }}">
+        <input type="hidden" name="button" value="{{ result }}">
+        <label for="number" class="label">Select a parking number:</label>
+        <select name="number" id="number" class="dropdown">
+          {% for num in range(1, 22) %}
+            <option value="{{ num }}">{{ num }}</option>
+          {% endfor %}
+        </select>
+        <button type="submit" class="submit-btn">Submit</button>
+      </form>
+    </div>
+    <!-- Right Column: Result or Image -->
+    <div class="right">
+      {% if selected_number %}
+        <p>You have chosen number <strong>{{ selected_number }}</strong> to park</p>
+        <a href="{{ url_for('home') }}">Back to Home</a>
+      {% else %}
+        <p><img src="{{url_for('static',filename='images/carpark.png')}}" alt=""></p> 
+      {% endif %}
+    </div>
+  </div>
+{% endblock %}
