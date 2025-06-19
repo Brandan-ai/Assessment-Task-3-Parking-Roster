@@ -1,0 +1,162 @@
+/* General Reset & Page Styling */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #202020; /* Light page background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Container Styling */
+.container {
+  background-color: #2e2e2e; /* Dark grey */
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  color: #fff;
+  min-width: 300px;
+}
+
+/* Input Fields */
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+  width: 90%;
+  padding: 10px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 5px;
+}
+
+/* Buttons */
+input[type="submit"] {
+  background-color: #816d6d; /* Light grey */
+  color: #000;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+input[type="submit"]:hover {
+  background-color: #c0c0c0;
+}
+
+/* Flash Messages */
+.flash-messages {
+  position: absolute;
+  top: 10px;
+  width: 100%;
+  text-align: center;
+}
+
+.flash {
+  padding: 10px;
+  margin: 10px auto;
+  border-radius: 5px;
+  width: 50%;
+  color: white;
+}
+
+a{
+    color:aqua;
+}
+
+h1{
+    color:rgb(255, 255, 255);
+    padding:10px;
+}
+
+.welcome-text {
+  text-align: center;
+  margin-bottom: 40px;
+  color: white;
+}
+
+/* Weekdays layout */
+.weekdays-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/* Each day box */
+.day-box {
+  background-color: #1db954; /* Green */
+  color: black;
+  border: 2px solid #ffffff;
+  padding: 40px 50px;
+  margin: 10px;
+  font-size: 28px;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 12px;
+  min-width: 80px;
+}
+
+.day-box:hover {
+    background-color:aqua;
+}
+
+/* Full page centering */
+.home-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Heading above weekday buttons */
+.day-picker-text h2 {
+  color: white;
+  margin-bottom: 20px;
+}
+
+p{
+    color:white;
+}
+
+.park-container {
+  display: flex;
+  justify-content: space-around;
+  padding: 50px;
+  gap:50px;
+}
+
+.left, .right {
+  background-color: #2c2c2c;
+  padding: 20px;
+  border-radius: 10px;
+  width: 440px;
+}
+
+.dropdown {
+  width: 100%;
+  padding: 10px;
+  background-color: white;
+  color: black;
+  border: none;
+  margin-bottom: 20px;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 10px;
+  background-color: limegreen;
+  color: black;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.submit-btn:hover {
+  background-color: green;
+}
